@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/main.c.s
 .PHONY : main.c.s
 
+study/xdp-frop-world.o: study/xdp-frop-world.c.o
+.PHONY : study/xdp-frop-world.o
+
+# target to build an object file
+study/xdp-frop-world.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.o
+.PHONY : study/xdp-frop-world.c.o
+
+study/xdp-frop-world.i: study/xdp-frop-world.c.i
+.PHONY : study/xdp-frop-world.i
+
+# target to preprocess a source file
+study/xdp-frop-world.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.i
+.PHONY : study/xdp-frop-world.c.i
+
+study/xdp-frop-world.s: study/xdp-frop-world.c.s
+.PHONY : study/xdp-frop-world.s
+
+# target to generate assembly for a file
+study/xdp-frop-world.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.s
+.PHONY : study/xdp-frop-world.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... study/xdp-frop-world.o"
+	@echo "... study/xdp-frop-world.i"
+	@echo "... study/xdp-frop-world.s"
 .PHONY : help
 
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ebpfStudy.dir/main.c.o"
+  "CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.o"
   "ebpfStudy"
   "ebpfStudy.pdb"
 )

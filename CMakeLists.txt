@@ -3,4 +3,4 @@ project(ebpfStudy C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(ebpfStudy main.c)
+add_executable(ebpfStudy main.c study/xdp-drop-world.c)

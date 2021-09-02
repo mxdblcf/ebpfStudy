@@ -79,6 +79,9 @@
 		<Unit filename="/home/mxd/桌面/ebpfStudy/main.c">
 			<Option target="ebpfStudy"/>
 		</Unit>
+		<Unit filename="/home/mxd/桌面/ebpfStudy/study/xdp-frop-world.c">
+			<Option target="ebpfStudy"/>
+		</Unit>
 		<Unit filename="/home/mxd/桌面/ebpfStudy/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

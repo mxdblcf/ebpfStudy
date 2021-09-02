@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/mxd/桌面/ebpfStudy/main.c" "/home/mxd/桌面/ebpfStudy/cmake-build-debug/CMakeFiles/ebpfStudy.dir/main.c.o"
+  "/home/mxd/桌面/ebpfStudy/study/xdp-frop-world.c" "/home/mxd/桌面/ebpfStudy/cmake-build-debug/CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
