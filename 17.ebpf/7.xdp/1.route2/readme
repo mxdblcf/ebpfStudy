@@ -1,0 +1,9 @@
+bash compile.sh
+
+sudo ip link set dev wlp0s20f3 xdp obj program.o sec mysection
+
+可以通过nmap工具查看端口可用性：
+nmap -sS 192.168.137.222
+输出为可以访问的端口
+
+sudo ip link set dev wlp0s20f3 xdp off

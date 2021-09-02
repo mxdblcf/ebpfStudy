@@ -1,0 +1,26 @@
+bpf map映射：
+bpf程序运行在内核，而且为了保证bpf程序运行的安全性，bpf虚拟机限制了系统调用，
+如果bpf程序需要和用户空间程序进程通信就需要bpf映射，
+bpf提供了如hash、stack、array等映射，在bpf程序中可以根据需求直接使用。
+
+以BPF_HASH为例，其定义在c++代码中的宏定义，展开如下：
+
+#define BPF_HASH1(_name) \
+  BPF_TABLE("hash", u64, u64, _name, 10240)
+#define BPF_HASH2(_name, _key_type) \
+  BPF_TABLE("hash", _key_type, u64, _name, 10240)
+#define BPF_HASH3(_name, _key_type, _leaf_type) \
+  BPF_TABLE("hash", _key_type, _leaf_type, _name, 10240)
+#define BPF_HASH4(_name, _key_type, _leaf_type, _size) \
+  BPF_TABLE("hash", _key_type, _leaf_type, _name, _size)
+
+// helper for default-variable macro function
+#define BPF_HASHX(_1, _2, _3, _4, NAME, ...) NAME
+
+// Define a hash function, some arguments optional
+// BPF_HASH(name, key_type=u64, leaf_type=u64, size=10240)
+#define BPF_HASH(...) \
+  BPF_HASHX(__VA_ARGS__, BPF_HASH4, BPF_HASH3, BPF_HASH2, BPF_HASH1)(__VA_ARGS__)
+  
+  
+ 

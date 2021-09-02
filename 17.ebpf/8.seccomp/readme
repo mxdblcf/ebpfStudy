@@ -1,0 +1,4 @@
+gcc main.c
+./a.out "ls -la"
+strace -f ./a.out "ls -la" > xx 2>&1
+cat xx |grep ENOENT

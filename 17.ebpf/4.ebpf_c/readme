@@ -1,0 +1,30 @@
+struct pt_regs {
+long ebx;                  //可执行文件路径的指针（regs.ebx中
+long ecx;                  //命令行参数的指针（regs.ecx中）
+long edx;                  //环境变量的指针（regs.edx中）。
+long esi;
+long edi;
+long ebp;
+long eax;
+int xds;
+int xes;
+long orig_eax;
+long eip;
+int xcs;
+long eflags;
+long esp;
+int xss;
+};
+该参数描述了在执行该系统调用时，用户态下的CPU寄存器在核心态的栈中的保存情况。
+通过这个参数，sys_execve能获得保存在用户空间的以下信息： 
+可执行文件路径的指针（regs.ebx中）、
+命令行参数的指针（regs.ecx中）和环境变量的指针（regs.edx中）。
+==================================================================================
+#define sec(x)             __attribute__((section(#x),used))
+关键字attribute可用于为函数或数据声明属性值，这样可以让编译程序优化处理。
+比如内核里面经常能看见的section：
+#define __exception     __attribute__((section(".exception.text")))
+具有该属性的函数，汇编代码将会放置到.exception.text段中，而不是.text段中。
+
+
+

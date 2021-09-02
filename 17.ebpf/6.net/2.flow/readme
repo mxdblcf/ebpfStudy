@@ -1,0 +1,38 @@
+bash build.sh
+sudo ./load.sh wlp0s20f3
+
+打开另一个终端：sudo cat /sys/kernel/debug/tracing/trace_pipe |grep Yes
+再打开一个终端：curl http://www.baidu.com
+
+sudo ./unload.sh wlp0s20f3
+
+===================================================================================
+流量控制
+iproute2提供了两个工具：ip和tc
+ip用来配置网络，tc用来配置流量控制
+
+可以通过命令：
+ip -a
+或
+tc qdisc ls
+查看网卡的队列规则：
+
+队列分为：有分类队列和无分类队列
+常见的lo网卡使用的是无分类队列:noqueue,除去这个外无分类队列还有pfifo_fast、fq_code1(公平队列控制延迟，它使用随机模式对进入的数据包分类)，
+bpf对无分类队列没有作用！
+
+有分类队列如图：《带过滤器的有分类队列规则》
+
+流控返回码：
+TC_ACT_OK(0):终止数据包处理流程，允许处理数据包
+TC_ACT_RECLASSIFY(1):终止数据包处理流程，从头开始分类
+TC_ACT_SHOT(2):终止数据包处理流程，丢弃数据包
+TC_ACT_PIPE(3):如果有下一个动作，迭代到下一个动作
+TC_ACT_UNSPEC(-1):使用tc配置的默认操作，类似于从一个分类器返回-1
+
+
+
+
+
+
+

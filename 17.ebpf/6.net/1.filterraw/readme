@@ -1,0 +1,5 @@
+bash build-loader.sh
+bash build-bpf-program.sh
+sudo loader-bin bpf_program.o
+
+ping 127.0.0.1

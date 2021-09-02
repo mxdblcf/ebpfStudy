@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/ebpfStudy.dir/main.c.o -o ebpfStudy 
