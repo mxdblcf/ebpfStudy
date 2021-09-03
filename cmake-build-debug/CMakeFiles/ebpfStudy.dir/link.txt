@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/ebpfStudy.dir/main.c.o CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.o -o ebpfStudy 
+/usr/bin/cc -g CMakeFiles/ebpfStudy.dir/main.c.o CMakeFiles/ebpfStudy.dir/study/xdp-drop-world.c.o CMakeFiles/ebpfStudy.dir/study/firstEbpf.c.o -o ebpfStudy 

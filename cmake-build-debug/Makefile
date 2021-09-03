@@ -153,29 +153,53 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/main.c.s
 .PHONY : main.c.s
 
-study/xdp-frop-world.o: study/xdp-frop-world.c.o
-.PHONY : study/xdp-frop-world.o
+study/firstEbpf.o: study/firstEbpf.c.o
+.PHONY : study/firstEbpf.o
 
 # target to build an object file
-study/xdp-frop-world.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.o
-.PHONY : study/xdp-frop-world.c.o
+study/firstEbpf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/firstEbpf.c.o
+.PHONY : study/firstEbpf.c.o
 
-study/xdp-frop-world.i: study/xdp-frop-world.c.i
-.PHONY : study/xdp-frop-world.i
+study/firstEbpf.i: study/firstEbpf.c.i
+.PHONY : study/firstEbpf.i
 
 # target to preprocess a source file
-study/xdp-frop-world.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.i
-.PHONY : study/xdp-frop-world.c.i
+study/firstEbpf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/firstEbpf.c.i
+.PHONY : study/firstEbpf.c.i
 
-study/xdp-frop-world.s: study/xdp-frop-world.c.s
-.PHONY : study/xdp-frop-world.s
+study/firstEbpf.s: study/firstEbpf.c.s
+.PHONY : study/firstEbpf.s
 
 # target to generate assembly for a file
-study/xdp-frop-world.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-frop-world.c.s
-.PHONY : study/xdp-frop-world.c.s
+study/firstEbpf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/firstEbpf.c.s
+.PHONY : study/firstEbpf.c.s
+
+study/xdp-drop-world.o: study/xdp-drop-world.c.o
+.PHONY : study/xdp-drop-world.o
+
+# target to build an object file
+study/xdp-drop-world.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-drop-world.c.o
+.PHONY : study/xdp-drop-world.c.o
+
+study/xdp-drop-world.i: study/xdp-drop-world.c.i
+.PHONY : study/xdp-drop-world.i
+
+# target to preprocess a source file
+study/xdp-drop-world.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-drop-world.c.i
+.PHONY : study/xdp-drop-world.c.i
+
+study/xdp-drop-world.s: study/xdp-drop-world.c.s
+.PHONY : study/xdp-drop-world.s
+
+# target to generate assembly for a file
+study/xdp-drop-world.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ebpfStudy.dir/build.make CMakeFiles/ebpfStudy.dir/study/xdp-drop-world.c.s
+.PHONY : study/xdp-drop-world.c.s
 
 # Help Target
 help:
@@ -189,9 +213,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... study/xdp-frop-world.o"
-	@echo "... study/xdp-frop-world.i"
-	@echo "... study/xdp-frop-world.s"
+	@echo "... study/firstEbpf.o"
+	@echo "... study/firstEbpf.i"
+	@echo "... study/firstEbpf.s"
+	@echo "... study/xdp-drop-world.o"
+	@echo "... study/xdp-drop-world.i"
+	@echo "... study/xdp-drop-world.s"
 .PHONY : help
 
 

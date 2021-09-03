@@ -18,3 +18,4 @@ clang -O2 -target bpf -c xdp-drop-world.c -o xdp-drop-world.o
 4.卸载这个xdp
 
 > ip link set dev enp0s8 xdp obj xdp-drop-world.o sec xdp verbose
+
